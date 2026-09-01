@@ -1,14 +1,4 @@
 {
-  "1080": {
-    "newsId": 1080,
-    "icon": "far fa-newspaper",
-    "title": "Test Message",
-    "friendlyUrl": "test-message",
-    "summary": null,
-    "routes": null,
-    "affectsAllRoutes": false,
-    "publishDateUtc": "2026-09-01T17:21:22.211+00:00"
-  },
   "1065": {
     "newsId": 1065,
     "icon": "far fa-newspaper",
