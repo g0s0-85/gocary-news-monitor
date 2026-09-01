@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GoCary News Monitor</title>
+<style>
+  :root {
+    --bg: #f5f6f8;
+    --card: #ffffff;
+    --border: #e2e4e9;
+    --text: #1c1e21;
+    --muted: #6b7280;
+    --added: #1a7f37;
+    --removed: #c62828;
+    --modified: #b5760a;
+    --accent: #2563eb;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+  }
+  header {
+    padding: 20px 24px;
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  header h1 { font-size: 18px; margin: 0; }
+  header p { margin: 4px 0 0; color: var(--muted); font-size: 13px; }
+  header a { color: var(--accent); }
+  #status { font-size: 13px; color: var(--muted); text-align: right; }
+  main { max-width: 900px; margin: 24px auto; padding: 0 16px 60px; }
+  h2 { font-size: 14px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); margin: 28px 0 12px; }
+  .empty {
+    text-align: center; color: var(--muted); padding: 50px 20px;
+    background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+  }
+  .entry {
+    background: var(--card); border: 1px solid var(--border); border-left: 4px solid var(--muted);
+    border-radius: 8px; padding: 14px 16px; margin-bottom: 12px;
+  }
+  .entry.added { border-left-color: var(--added); }
+  .entry.removed { border-left-color: var(--removed); }
+  .entry.modified { border-left-color: var(--modified); }
+  .entry-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .badge {
+    font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;
+    padding: 2px 8px; border-radius: 999px; color: white;
+  }
+  .badge.added { background: var(--added); }
+  .badge.removed { background: var(--removed); }
+  .badge.modified { background: var(--modified); }
+  .entry-title { font-weight: 600; font-size: 14px; }
+  .entry-time { font-size: 12px; color: var(--muted); white-space: nowrap; }
+  .details { margin-top: 8px; font-size: 13px; color: var(--muted); }
+  .details table { border-collapse: collapse; width: 100%; margin-top: 6px; }
+  .details td { padding: 3px 6px; vertical-align: top; font-size: 12px; }
+  .details td.field { color: var(--text); font-weight: 600; white-space: nowrap; }
+  .details .old { color: var(--removed); text-decoration: line-through; }
+  .details .new { color: var(--added); }
+  .current-item {
+    background: var(--card); border: 1px solid var(--border); border-radius: 8px;
+    padding: 12px 16px; margin-bottom: 10px; font-size: 13px;
+  }
+  .current-item .t { font-weight: 600; margin-bottom: 3px; }
+  .current-item .d { color: var(--muted); font-size: 12px; }
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>GoCary News Monitor</h1>
+    <p>Watching <a href="https://www.gocarylive.org/News" target="_blank" rel="noopener">gocarylive.org/News</a> · checked every 15 min via GitHub Actions</p>
+  </div>
+  <div id="status">loading status…</div>
+</header>
+<main>
+  <h2>Change log</h2>
+  <div id="log"><div class="empty">Loading…</div></div>
+
+  <h2>Currently published news</h2>
+  <div id="current"><div class="empty">Loading…</div></div>
+</main>
+
+<script>
+function esc(s) {
+  if (s === null || s === undefined) return '<i>none</i>';
+  return String(s).replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+}
+
+async function fetchJson(path) {
+  try {
+    const res = await fetch(path + '?t=' + Date.now());
+    if (!res.ok) return null;
+    return await res.json();
+  } catch {
+    return null;
+  }
+}
+
+async function fetchJsonl(path) {
+  try {
+    const res = await fetch(path + '?t=' + Date.now());
+    if (!res.ok) return [];
+    const text = await res.text();
+    return text.split('\n').filter(l => l.trim()).map(l => JSON.parse(l));
+  } catch {
+    return [];
+  }
+}
+
+function renderDetails(entry) {
+  if (entry.type !== 'modified' || !entry.details) return '';
+  const rows = Object.entries(entry.details).map(([field, change]) => `
+    <tr>
+      <td class="field">${esc(field)}</td>
+      <td class="old">${esc(JSON.stringify(change.old))}</td>
+      <td class="new">${esc(JSON.stringify(change.new))}</td>
+    </tr>
+  `).join('');
+  return `<div class="details"><table>${rows}</table></div>`;
+}
+
+function renderLog(entries) {
+  const el = document.getElementById('log');
+  if (!entries.length) {
+    el.innerHTML = '<div class="empty">No changes logged yet. The first check establishes a baseline; anything that changes after that will show up here.</div>';
+    return;
+  }
+  entries = entries.slice().reverse();
+  el.innerHTML = entries.map(e => `
+    <div class="entry ${e.type}">
+      <div class="entry-top">
+        <div>
+          <span class="badge ${e.type}">${e.type}</span>
+          <span class="entry-title">${esc(e.title)}</span>
+        </div>
+        <div class="entry-time">${new Date(e.timestamp).toLocaleString()}</div>
+      </div>
+      ${renderDetails(e)}
+    </div>
+  `).join('');
+}
+
+function renderCurrent(stateObj) {
+  const el = document.getElementById('current');
+  if (!stateObj) {
+    el.innerHTML = '<div class="empty">No data yet — waiting on the first scheduled check.</div>';
+    return;
+  }
+  const items = Object.values(stateObj).sort((a, b) => (b.publishDateUtc || '').localeCompare(a.publishDateUtc || ''));
+  if (!items.length) {
+    el.innerHTML = '<div class="empty">No news items currently published.</div>';
+    return;
+  }
+  el.innerHTML = items.map(item => `
+    <div class="current-item">
+      <div class="t">${esc(item.title)}</div>
+      <div class="d">${item.publishDateUtc ? new Date(item.publishDateUtc).toLocaleString() : ''}${item.routes && item.routes.length ? ' · routes: ' + esc(item.routes.join(', ')) : ''}${item.affectsAllRoutes ? ' · affects all routes' : ''}</div>
+    </div>
+  `).join('');
+}
+
+function renderStatus(status) {
+  const el = document.getElementById('status');
+  if (!status) {
+    el.textContent = 'not checked yet';
+    return;
+  }
+  if (status.last_error) {
+    el.innerHTML = `<span style="color:#c62828">last check errored: ${esc(status.last_error)}</span>`;
+  } else if (status.last_checked) {
+    el.textContent = `last checked ${new Date(status.last_checked).toLocaleString()} · ${status.checks_run} checks · ${status.changes_logged} changes logged`;
+  } else {
+    el.textContent = 'not checked yet';
+  }
+}
+
+(async () => {
+  const [log, state, status] = await Promise.all([
+    fetchJsonl('data/changelog.jsonl'),
+    fetchJson('data/state.json'),
+    fetchJson('data/status.json'),
+  ]);
+  renderLog(log);
+  renderCurrent(state);
+  renderStatus(status);
+})();
+</script>
+</body>
+</html>
