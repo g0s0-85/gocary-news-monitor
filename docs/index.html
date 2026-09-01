@@ -83,11 +83,11 @@
   <div id="status">loading status…</div>
 </header>
 <main>
-  <h2>Change log</h2>
-  <div id="log"><div class="empty">Loading…</div></div>
-
   <h2>Currently published news</h2>
   <div id="current"><div class="empty">Loading…</div></div>
+
+  <h2>Change log</h2>
+  <div id="log"><div class="empty">Loading…</div></div>
 </main>
 
 <script>
@@ -96,25 +96,44 @@ function esc(s) {
   return String(s).replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
 }
 
-async function fetchJson(path) {
+// GitHub Pages fronts docs/data/*.json through a CDN that caches for up to
+// 10 minutes and doesn't vary by query string, so a plain fetch to
+// "data/state.json" can silently serve stale data. The GitHub Contents API
+// caches for only 60 seconds, so we hit that first and only fall back to
+// the Pages-served copy (which can lag) if the API call fails, e.g. due to
+// its unauthenticated rate limit (60 requests/hour per visitor IP).
+const REPO = 'g0s0-85/gocary-news-monitor';
+const BRANCH = 'main';
+const FILES = {
+  state: { api: 'docs/data/state.json', pages: 'data/state.json' },
+  changelog: { api: 'docs/data/changelog.jsonl', pages: 'data/changelog.jsonl' },
+  status: { api: 'docs/data/status.json', pages: 'data/status.json' },
+};
+
+async function fetchText(fileKey) {
+  const { api, pages } = FILES[fileKey];
   try {
-    const res = await fetch(path + '?t=' + Date.now());
-    if (!res.ok) return null;
-    return await res.json();
-  } catch {
-    return null;
-  }
+    const url = `https://api.github.com/repos/${REPO}/contents/${api}?ref=${BRANCH}`;
+    const res = await fetch(url, { headers: { Accept: 'application/vnd.github.raw' } });
+    if (res.ok) return await res.text();
+  } catch {}
+  try {
+    const res = await fetch(pages + '?t=' + Date.now());
+    if (res.ok) return await res.text();
+  } catch {}
+  return null;
 }
 
-async function fetchJsonl(path) {
-  try {
-    const res = await fetch(path + '?t=' + Date.now());
-    if (!res.ok) return [];
-    const text = await res.text();
-    return text.split('\n').filter(l => l.trim()).map(l => JSON.parse(l));
-  } catch {
-    return [];
-  }
+async function fetchJson(fileKey) {
+  const text = await fetchText(fileKey);
+  if (text === null) return null;
+  try { return JSON.parse(text); } catch { return null; }
+}
+
+async function fetchJsonl(fileKey) {
+  const text = await fetchText(fileKey);
+  if (text === null) return [];
+  return text.split('\n').filter(l => l.trim()).map(l => JSON.parse(l));
 }
 
 function renderDetails(entry) {
@@ -186,9 +205,9 @@ function renderStatus(status) {
 
 (async () => {
   const [log, state, status] = await Promise.all([
-    fetchJsonl('data/changelog.jsonl'),
-    fetchJson('data/state.json'),
-    fetchJson('data/status.json'),
+    fetchJsonl('changelog'),
+    fetchJson('state'),
+    fetchJson('status'),
   ]);
   renderLog(log);
   renderCurrent(state);
