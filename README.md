@@ -29,7 +29,14 @@ last known snapshot, and records anything added, removed, or edited
   `docs/data/changelog.jsonl`.
 - **`docs/index.html`** — a static dashboard (no backend) that reads those
   two files plus `docs/data/status.json` and renders the change log and the
-  currently-published news. This is what GitHub Pages serves.
+  currently-published news (pinned above the log). This is what GitHub
+  Pages serves. It reads the data via the GitHub Contents API rather than
+  fetching `data/*.json` directly — GitHub Pages fronts those files with a
+  CDN that caches for 10 minutes and ignores query strings, so a plain
+  fetch (even with a cache-busting `?t=`) can silently serve stale data.
+  The Contents API caches for only 60 seconds; if a call to it fails (e.g.
+  its 60-requests/hour-per-IP unauthenticated rate limit), the page falls
+  back to fetching the Pages-served copy directly, which may then lag.
 
 ## One-time setup
 
