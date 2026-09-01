@@ -12,7 +12,7 @@ last known snapshot, and records anything added, removed, or edited
 ## How it works
 
 - **`.github/workflows/check-news.yml`** — a GitHub Actions workflow that
-  runs every 15 minutes, plus on demand. It runs `scripts/check_news.py`,
+  runs every 5 minutes, plus on demand. It runs `scripts/check_news.py`,
   and if anything changed, commits the update.
 - **`scripts/check_news.py`** — fetches the news API, compares it to
   `docs/data/state.json`, and appends any changes to
@@ -59,8 +59,10 @@ the feed, and if anything changed, the dashboard updates automatically.
 ## Adjusting things
 
 - **Check frequency**: edit the `cron` line in
-  `.github/workflows/check-news.yml` (GitHub Actions schedules are
-  best-effort and can lag a few minutes under load, but 15 min is reliable
-  in practice).
+  `.github/workflows/check-news.yml`. 5 minutes is roughly the practical
+  floor for GitHub Actions — schedules are best-effort and can lag a few
+  minutes under load, and any change that's added and then reverted
+  entirely between two checks will never show up in the log, no matter how
+  tight the interval.
 - **What counts as a change**: edit `FIELDS_TO_COMPARE` in
   `scripts/check_news.py`.
