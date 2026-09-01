@@ -1,0 +1,35 @@
+{
+  "1065": {
+    "newsId": 1065,
+    "icon": "far fa-newspaper",
+    "title": "Service Alert: Apex Senior Center Temporarily Closed but Stop #16093 OPEN, 8/18 - 9/7",
+    "friendlyUrl": "service-alert-apex-senior-center-temporarily-closed-but-stop-16093-open-8-18-9-7",
+    "summary": null,
+    "routes": null,
+    "affectsAllRoutes": false,
+    "publishDateUtc": "2026-08-19T00:28:29.0915141+00:00"
+  },
+  "1039": {
+    "newsId": 1039,
+    "icon": "far fa-newspaper",
+    "title": "Where should bus service go next? We want to hear from you!",
+    "friendlyUrl": "where-should-bus-service-go-next-we-want-to-hear-from-you",
+    "summary": null,
+    "routes": null,
+    "affectsAllRoutes": true,
+    "publishDateUtc": "2026-07-29T21:37:44.1515624+00:00"
+  },
+  "836": {
+    "newsId": 836,
+    "icon": "fas fa-exclamation",
+    "title": "GoApex Route 1 Long Term Detour - Downtown Apex",
+    "friendlyUrl": "goapex-route-1-long-term-detour-downtown-apex",
+    "summary": null,
+    "routes": [
+      "9",
+      "GA1"
+    ],
+    "affectsAllRoutes": false,
+    "publishDateUtc": "2026-01-23T12:58:54.4681655+00:00"
+  }
+}
