@@ -13,11 +13,14 @@ last known snapshot, and records anything added, removed, or edited
 
 - **`.github/workflows/check-news.yml`** — a GitHub Actions workflow that
   runs `scripts/check_news.py` and, if anything changed, commits the
-  update. It's triggered by `workflow_dispatch` (an API call anyone with
-  write access can make, including a script) rather than GitHub's own
-  `schedule:` trigger — that's still in the file, but GitHub's built-in
-  cron turned out to be too unreliable on this repo (over 2 hours between
-  its first two fires), so it's not what's actually driving checks.
+  update. It's triggered only by `workflow_dispatch` (an API call anyone
+  with write access can make, including a script) — GitHub's own
+  `schedule:` trigger was removed after it proved both unreliable (over 2
+  hours between its first two fires) and, once it did start firing, prone
+  to landing at the same moment as the external trigger below and racing
+  it to commit (this caused an actual failed run — see git history around
+  2026-09-02 04:45 UTC). The commit/push step retries a few times on
+  conflict as a safety net regardless.
 - **A [cron-job.org](https://cron-job.org) job** (set up separately, not
   part of this repo) calls GitHub's API once a minute to fire that
   `workflow_dispatch` event — this is what actually keeps the checks
