@@ -1,4 +1,14 @@
 {
+  "1082": {
+    "newsId": 1082,
+    "icon": "far fa-newspaper",
+    "title": "Go Apex is delayed",
+    "friendlyUrl": "go-apex-is-delayed",
+    "summary": null,
+    "routes": null,
+    "affectsAllRoutes": false,
+    "publishDateUtc": "2026-09-02T23:12:00+00:00"
+  },
   "1065": {
     "newsId": 1065,
     "icon": "far fa-newspaper",
