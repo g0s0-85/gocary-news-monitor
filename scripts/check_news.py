@@ -131,9 +131,11 @@ def main():
         save_json(STATUS_FILE, status)
         raise
 
+    had_error = status.get("last_error") is not None
     previous = load_json(STATE_FILE, {})
+    is_baseline_run = not previous
 
-    if not previous:
+    if is_baseline_run:
         # First run ever: establish a baseline, don't log fake "added" spam
         # for every item that already existed before we started watching.
         entries = []
@@ -149,7 +151,15 @@ def main():
     status["last_error"] = None
     status["checks_run"] += 1
     status["changes_logged"] += len(entries)
-    save_json(STATUS_FILE, status)
+
+    # Checks run every minute, but a run that found nothing to report has
+    # nothing worth committing. Persisting status.json on every single run
+    # (rather than only on baseline/real-change/error-recovery runs) made
+    # it a hot file that near-simultaneous runs would race to update and
+    # conflict on. The dashboard gets its "still checking" freshness signal
+    # from the GitHub Actions run history instead, not from this file.
+    if is_baseline_run or entries or had_error:
+        save_json(STATUS_FILE, status)
 
     print(f"Checked {len(items)} news items, {len(entries)} change(s) logged.")
 

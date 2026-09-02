@@ -188,30 +188,54 @@ function renderCurrent(stateObj) {
   `).join('');
 }
 
-function renderStatus(status) {
-  const el = document.getElementById('status');
-  if (!status) {
-    el.textContent = 'not checked yet';
-    return;
-  }
-  if (status.last_error) {
-    el.innerHTML = `<span style="color:#c62828">last check errored: ${esc(status.last_error)}</span>`;
-  } else if (status.last_checked) {
-    el.textContent = `last checked ${new Date(status.last_checked).toLocaleString()} · ${status.checks_run} checks · ${status.changes_logged} changes logged`;
-  } else {
-    el.textContent = 'not checked yet';
+async function fetchLatestRun() {
+  try {
+    const url = `https://api.github.com/repos/${REPO}/actions/workflows/check-news.yml/runs?per_page=1`;
+    const res = await fetch(url, { headers: { Accept: 'application/vnd.github+json' } });
+    if (!res.ok) return null;
+    const data = await res.json();
+    return (data.workflow_runs && data.workflow_runs[0]) || null;
+  } catch {
+    return null;
   }
 }
 
+function renderStatus(status, latestRun) {
+  const el = document.getElementById('status');
+  const parts = [];
+
+  // "Still checking" freshness comes from the Actions run history, not
+  // status.json — that file is only committed when something actually
+  // changes, so it can't be used to show "yes, this checked a minute ago."
+  if (latestRun) {
+    const when = new Date(latestRun.created_at).toLocaleString();
+    if (latestRun.conclusion === 'success') {
+      parts.push(`last check ${when}`);
+    } else {
+      parts.push(`<span style="color:#c62828">last check ${when} failed</span>`);
+    }
+  }
+
+  if (status) {
+    if (status.last_error) {
+      parts.push(`<span style="color:#c62828">last error: ${esc(status.last_error)}</span>`);
+    }
+    parts.push(`${status.changes_logged || 0} change(s) logged total`);
+  }
+
+  el.innerHTML = parts.length ? parts.join(' · ') : 'not checked yet';
+}
+
 (async () => {
-  const [log, state, status] = await Promise.all([
+  const [log, state, status, latestRun] = await Promise.all([
     fetchJsonl('changelog'),
     fetchJson('state'),
     fetchJson('status'),
+    fetchLatestRun(),
   ]);
   renderLog(log);
   renderCurrent(state);
-  renderStatus(status);
+  renderStatus(status, latestRun);
 })();
 </script>
 </body>
