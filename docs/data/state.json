@@ -1,15 +1,16 @@
 {
-  "1084": {
-    "newsId": 1084,
-    "icon": "far fa-newspaper",
-    "title": "Test Message",
-    "friendlyUrl": "test-message",
+  "1085": {
+    "newsId": 1085,
+    "icon": "fas fa-exclamation",
+    "title": "Public Safety Day Detour - September 5, 2026",
+    "friendlyUrl": "public-safety-day-detour-september-5-2026",
     "summary": null,
     "routes": [
-      "7"
+      "5",
+      "6"
     ],
     "affectsAllRoutes": false,
-    "publishDateUtc": "2026-09-03T15:07:44.948708+00:00"
+    "publishDateUtc": "2026-09-03T15:14:15.073935+00:00"
   },
   "1083": {
     "newsId": 1083,

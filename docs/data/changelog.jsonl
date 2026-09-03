@@ -8,3 +8,5 @@
 {"timestamp": "2026-09-03T01:00:24.220571+00:00", "type": "removed", "newsId": "1082", "title": "Go Apex is delayed", "details": null}
 {"timestamp": "2026-09-03T15:07:21.891406+00:00", "type": "added", "newsId": "1083", "title": "Test Message", "details": null}
 {"timestamp": "2026-09-03T15:08:59.961367+00:00", "type": "added", "newsId": "1084", "title": "Test Message", "details": null}
+{"timestamp": "2026-09-03T15:15:33.278500+00:00", "type": "added", "newsId": "1085", "title": "Public Safety Day Detour - September 5, 2026", "details": null}
+{"timestamp": "2026-09-03T15:15:33.278500+00:00", "type": "removed", "newsId": "1084", "title": "Test Message", "details": null}
