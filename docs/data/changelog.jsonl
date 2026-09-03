@@ -3,3 +3,4 @@
 {"timestamp": "2026-09-01T20:52:14.583532+00:00", "type": "added", "newsId": "1080", "title": "Test Message", "details": null}
 {"timestamp": "2026-09-01T20:54:23.447749+00:00", "type": "removed", "newsId": "1080", "title": "Test Message", "details": null}
 {"timestamp": "2026-09-02T23:45:18.714210+00:00", "type": "added", "newsId": "1082", "title": "Go Apex is delayed", "details": null}
+{"timestamp": "2026-09-03T00:13:14.625057+00:00", "type": "removed", "newsId": "1082", "title": "Go Apex is delayed", "details": null}
