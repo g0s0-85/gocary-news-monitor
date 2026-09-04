@@ -209,7 +209,12 @@ function renderStatus(status, latestRun) {
   // changes, so it can't be used to show "yes, this checked a minute ago."
   if (latestRun) {
     const when = new Date(latestRun.created_at).toLocaleString();
-    if (latestRun.conclusion === 'success') {
+    if (latestRun.status !== 'completed') {
+      // In progress/queued: conclusion is still null at this point, not a
+      // failure — checks run every minute, so this is a common thing to
+      // catch mid-run, not something worth flagging in red.
+      parts.push(`checking now (started ${when})`);
+    } else if (latestRun.conclusion === 'success') {
       parts.push(`last check ${when}`);
     } else {
       parts.push(`<span style="color:#c62828">last check ${when} failed</span>`);
