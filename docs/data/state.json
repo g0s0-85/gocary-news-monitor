@@ -1,14 +1,4 @@
 {
-  "1065": {
-    "newsId": 1065,
-    "icon": "far fa-newspaper",
-    "title": "Service Alert: Apex Senior Center Temporarily Closed but Stop #16093 OPEN, 8/18 - 9/7",
-    "friendlyUrl": "service-alert-apex-senior-center-temporarily-closed-but-stop-16093-open-8-18-9-7",
-    "summary": null,
-    "routes": null,
-    "affectsAllRoutes": false,
-    "publishDateUtc": "2026-08-19T00:28:29.0915141+00:00"
-  },
   "1039": {
     "newsId": 1039,
     "icon": "far fa-newspaper",
