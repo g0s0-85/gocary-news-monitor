@@ -60,6 +60,7 @@
   .badge.modified { background: var(--modified); }
   .entry-title { font-weight: 600; font-size: 14px; }
   .entry-time { font-size: 12px; color: var(--muted); white-space: nowrap; }
+  .entry-summary { margin-top: 6px; font-size: 13px; color: var(--text); white-space: pre-wrap; }
   .details { margin-top: 8px; font-size: 13px; color: var(--muted); }
   .details table { border-collapse: collapse; width: 100%; margin-top: 6px; }
   .details td { padding: 3px 6px; vertical-align: top; font-size: 12px; }
@@ -72,6 +73,7 @@
   }
   .current-item .t { font-weight: 600; margin-bottom: 3px; }
   .current-item .d { color: var(--muted); font-size: 12px; }
+  .current-item .s { margin-top: 6px; font-size: 13px; color: var(--text); white-space: pre-wrap; }
 </style>
 </head>
 <body>
@@ -164,6 +166,7 @@ function renderLog(entries) {
         </div>
         <div class="entry-time">${new Date(e.timestamp).toLocaleString()}</div>
       </div>
+      ${e.summary ? `<div class="entry-summary">${esc(e.summary)}</div>` : ''}
       ${renderDetails(e)}
     </div>
   `).join('');
@@ -184,6 +187,7 @@ function renderCurrent(stateObj) {
     <div class="current-item">
       <div class="t">${esc(item.title)}</div>
       <div class="d">${item.publishDateUtc ? new Date(item.publishDateUtc).toLocaleString() : ''}${item.routes && item.routes.length ? ' · routes: ' + esc(item.routes.join(', ')) : ''}${item.affectsAllRoutes ? ' · affects all routes' : ''}</div>
+      ${item.summary ? `<div class="s">${esc(item.summary)}</div>` : ''}
     </div>
   `).join('');
 }

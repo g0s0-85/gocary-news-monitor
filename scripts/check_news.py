@@ -78,6 +78,7 @@ def diff_snapshot(previous, current_items):
             "type": "added",
             "newsId": news_id,
             "title": item.get("title"),
+            "summary": item.get("summary"),
             "details": None,
         })
 
@@ -88,6 +89,7 @@ def diff_snapshot(previous, current_items):
             "type": "removed",
             "newsId": news_id,
             "title": item.get("title"),
+            "summary": item.get("summary"),
             "details": None,
         })
 
