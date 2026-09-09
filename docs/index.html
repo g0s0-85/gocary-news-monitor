@@ -39,6 +39,15 @@
   #status { font-size: 13px; color: var(--muted); text-align: right; }
   main { max-width: 900px; margin: 24px auto; padding: 0 16px 60px; }
   h2 { font-size: 14px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); margin: 28px 0 12px; }
+  .explainer {
+    background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+    padding: 16px 18px; font-size: 13px; color: var(--muted); line-height: 1.5;
+  }
+  .explainer p { margin: 0; }
+  .explainer p + p { margin-top: 10px; }
+  .explainer a { color: var(--accent); }
+  .legend { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+  .legend > span { display: flex; align-items: center; gap: 6px; }
   .empty {
     text-align: center; color: var(--muted); padding: 50px 20px;
     background: var(--card); border: 1px solid var(--border); border-radius: 10px;
@@ -85,6 +94,15 @@
   <div id="status">loading status…</div>
 </header>
 <main>
+  <div class="explainer">
+    <p>This page automatically checks <a href="https://www.gocarylive.org/News" target="_blank" rel="noopener">GoCary's News page</a> every minute and keeps a permanent log of every change — nothing here is entered by hand. "Currently published news" below always reflects what's live on GoCary's site right now; the change log underneath is the full history, including anything that's since been taken down.</p>
+    <p class="legend">
+      <span><span class="badge added">added</span> a new announcement was posted</span>
+      <span><span class="badge removed">removed</span> an announcement was taken down</span>
+      <span><span class="badge modified">modified</span> an existing announcement's text, routes, or date changed — the entry shows exactly what changed</span>
+    </p>
+  </div>
+
   <h2>Currently published news</h2>
   <div id="current"><div class="empty">Loading…</div></div>
 
