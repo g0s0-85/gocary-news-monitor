@@ -253,7 +253,7 @@ function renderStatus(status, latestRun) {
   el.innerHTML = parts.length ? parts.join(' · ') : 'not checked yet';
 }
 
-(async () => {
+async function refresh() {
   const [log, state, status, latestRun] = await Promise.all([
     fetchJsonl('changelog'),
     fetchJson('state'),
@@ -263,7 +263,22 @@ function renderStatus(status, latestRun) {
   renderLog(log);
   renderCurrent(state);
   renderStatus(status, latestRun);
-})();
+}
+
+refresh();
+
+// Checks run every minute, so refresh on the same cadence -- but only
+// while the tab is actually visible, both to avoid burning requests
+// against the GitHub API's unauthenticated rate limit on a backgrounded
+// tab nobody's looking at, and to refresh immediately (rather than up to
+// a minute late) when someone switches back to it.
+setInterval(() => {
+  if (document.visibilityState === 'visible') refresh();
+}, 60000);
+
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'visible') refresh();
+});
 </script>
 </body>
 </html>
