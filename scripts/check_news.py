@@ -11,8 +11,10 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import requests
+from bs4 import BeautifulSoup
 
 NEWS_API_URL = "https://www.gocarylive.org/News/GetAllNews"
+NEWS_DETAIL_URL = "https://www.gocarylive.org/News/{news_id}/{friendly_url}/"
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "docs" / "data"
 STATE_FILE = DATA_DIR / "state.json"
@@ -22,12 +24,15 @@ STATUS_FILE = DATA_DIR / "status.json"
 FIELDS_TO_COMPARE = [
     "title",
     "summary",
+    "body",
     "routes",
     "affectsAllRoutes",
     "publishDateUtc",
     "icon",
     "friendlyUrl",
 ]
+
+HEADERS = {"User-Agent": "gocary-news-monitor/1.0 (+github actions)"}
 
 
 def now_iso():
@@ -39,10 +44,26 @@ def fetch_news():
         NEWS_API_URL,
         params={"_": int(time.time() * 1000)},
         timeout=20,
-        headers={"User-Agent": "gocary-news-monitor/1.0 (+github actions)"},
+        headers=HEADERS,
     )
     resp.raise_for_status()
     return resp.json()
+
+
+def fetch_news_body(news_id, friendly_url):
+    """The "Read More" content isn't in the GetAllNews API (its "summary"
+    field is a separate, often-empty teaser) -- it's only rendered into the
+    individual news article page's HTML, inside a div.note-editable block.
+    """
+    url = NEWS_DETAIL_URL.format(news_id=news_id, friendly_url=friendly_url)
+    resp = requests.get(url, timeout=20, headers=HEADERS)
+    resp.raise_for_status()
+    soup = BeautifulSoup(resp.text, "html.parser")
+    editable = soup.select_one(".note-editable")
+    if not editable:
+        return None
+    text = editable.get_text(separator="\n", strip=True)
+    return text or None
 
 
 def load_json(path, default):
@@ -79,6 +100,7 @@ def diff_snapshot(previous, current_items):
             "newsId": news_id,
             "title": item.get("title"),
             "summary": item.get("summary"),
+            "body": item.get("body"),
             "details": None,
         })
 
@@ -90,6 +112,7 @@ def diff_snapshot(previous, current_items):
             "newsId": news_id,
             "title": item.get("title"),
             "summary": item.get("summary"),
+            "body": item.get("body"),
             "details": None,
         })
 
@@ -126,6 +149,14 @@ def main():
 
     try:
         items = fetch_news()
+        for item in items:
+            try:
+                item["body"] = fetch_news_body(item["newsId"], item["friendlyUrl"])
+            except Exception:
+                # One article's detail page failing to load shouldn't sink
+                # the whole check -- fall back to no body for this item
+                # rather than raising and losing the run entirely.
+                item["body"] = None
     except Exception as exc:
         status["last_error"] = f"{now_iso()}: {exc}"
         status["last_checked"] = now_iso()

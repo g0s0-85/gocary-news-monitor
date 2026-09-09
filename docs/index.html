@@ -166,7 +166,7 @@ function renderLog(entries) {
         </div>
         <div class="entry-time">${new Date(e.timestamp).toLocaleString()}</div>
       </div>
-      ${e.summary ? `<div class="entry-summary">${esc(e.summary)}</div>` : ''}
+      ${e.body || e.summary ? `<div class="entry-summary">${esc(e.body || e.summary)}</div>` : ''}
       ${renderDetails(e)}
     </div>
   `).join('');
@@ -187,7 +187,7 @@ function renderCurrent(stateObj) {
     <div class="current-item">
       <div class="t">${esc(item.title)}</div>
       <div class="d">${item.publishDateUtc ? new Date(item.publishDateUtc).toLocaleString() : ''}${item.routes && item.routes.length ? ' · routes: ' + esc(item.routes.join(', ')) : ''}${item.affectsAllRoutes ? ' · affects all routes' : ''}</div>
-      ${item.summary ? `<div class="s">${esc(item.summary)}</div>` : ''}
+      ${item.body || item.summary ? `<div class="s">${esc(item.body || item.summary)}</div>` : ''}
     </div>
   `).join('');
 }
