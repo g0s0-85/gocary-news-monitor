@@ -1,4 +1,14 @@
 {
+  "1086": {
+    "newsId": 1086,
+    "icon": "far fa-newspaper",
+    "title": "The Route",
+    "friendlyUrl": "the-route",
+    "summary": "The route 9 is currently experiencing delays of 10-20 minutes. Riders should expect minor delays along the route",
+    "routes": null,
+    "affectsAllRoutes": false,
+    "publishDateUtc": "2026-09-09T01:01:15.7688405+00:00"
+  },
   "1039": {
     "newsId": 1039,
     "icon": "far fa-newspaper",
