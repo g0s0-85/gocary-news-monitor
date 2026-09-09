@@ -1,4 +1,14 @@
 {
+  "1088": {
+    "newsId": 1088,
+    "icon": "far fa-newspaper",
+    "title": "Route 4 is delayed",
+    "friendlyUrl": "route-4-is-delayed",
+    "summary": null,
+    "routes": null,
+    "affectsAllRoutes": false,
+    "publishDateUtc": "2026-09-09T11:30:00+00:00"
+  },
   "1087": {
     "newsId": 1087,
     "icon": "far fa-newspaper",
