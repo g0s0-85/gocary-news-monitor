@@ -1,4 +1,15 @@
 {
+  "1093": {
+    "newsId": 1093,
+    "icon": "far fa-newspaper",
+    "title": "Service Alert Route 9",
+    "friendlyUrl": "service-alert-route-9",
+    "summary": "The 4:00pm and 4:21pm trip will not run for mechanical reasons.\u00a0 We apologize for the inconvenience.\u00a0\u00a0",
+    "routes": null,
+    "affectsAllRoutes": false,
+    "publishDateUtc": "2026-09-10T20:30:19.5052953+00:00",
+    "body": "The 4:00pm and 4:21pm trip will not run for mechanical reasons.\u00a0 We apoloize for the inconvience."
+  },
   "1091": {
     "newsId": 1091,
     "icon": "far fa-newspaper",
