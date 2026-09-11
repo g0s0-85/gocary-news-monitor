@@ -10,17 +10,6 @@
     "publishDateUtc": "2026-09-10T20:30:19.5052953+00:00",
     "body": "The 4:00pm and 4:21pm trip will not run for mechanical reasons.\u00a0 We apoloize for the inconvience."
   },
-  "1091": {
-    "newsId": 1091,
-    "icon": "far fa-newspaper",
-    "title": "Route 2 Alert: Potential Evening Delays Due to Construction",
-    "friendlyUrl": "route-2-alert-potential-evening-delays-due-to-construction",
-    "summary": null,
-    "routes": null,
-    "affectsAllRoutes": false,
-    "publishDateUtc": "2026-09-09T18:00:17.905+00:00",
-    "body": "Expect brief delays on Route 2 tonight (9/9) and tomorrow night (9/10), from 8:00 PM to end of service, due to NCDOT construction at Trinity Rd. & Blue Ridge Rd. Buses will still get through. Thanks for your patience."
-  },
   "1089": {
     "newsId": 1089,
     "icon": "far fa-newspaper",
