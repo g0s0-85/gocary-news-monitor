@@ -10,39 +10,6 @@
     "publishDateUtc": "2026-09-10T20:30:19.5052953+00:00",
     "body": "The 4:00pm and 4:21pm trip will not run for mechanical reasons.\u00a0 We apoloize for the inconvience."
   },
-  "1089": {
-    "newsId": 1089,
-    "icon": "far fa-newspaper",
-    "title": "Route 3 is delayed",
-    "friendlyUrl": "route-3-is-delayed",
-    "summary": null,
-    "routes": null,
-    "affectsAllRoutes": false,
-    "publishDateUtc": "2026-09-09T14:15:00+00:00",
-    "body": "Route 3 is delayed 15-20 minutes, please expect delays along this route.\nRt 3 10:15 AM 3 - outbound is delayed 15-20 minutes.\nRt 3 10:28 AM 3- Inbound is delayed 15-20 minutes.\nRt 3 11:15 AM 3 - outbound is delayed 15-20 minutes.\nRt 3 11:28 AM 3- Inbound is delayed 15-20 minutes we appreciate your patience."
-  },
-  "1087": {
-    "newsId": 1087,
-    "icon": "far fa-newspaper",
-    "title": "The route 9 ",
-    "friendlyUrl": "the-route-9",
-    "summary": null,
-    "routes": null,
-    "affectsAllRoutes": false,
-    "publishDateUtc": "2026-09-09T01:14:41.5066523+00:00",
-    "body": "The ROUTE 9 is back in normal service"
-  },
-  "1086": {
-    "newsId": 1086,
-    "icon": "far fa-newspaper",
-    "title": "The Route",
-    "friendlyUrl": "the-route",
-    "summary": "The route 9 is currently experiencing delays of 10-20 minutes. Riders should expect minor delays along the route",
-    "routes": null,
-    "affectsAllRoutes": false,
-    "publishDateUtc": "2026-09-09T01:01:15.7688405+00:00",
-    "body": "The Route 9---The 9 Outbound is currently 21 minutes late\nThe Route 9---The 9 IBound is currently running late"
-  },
   "1039": {
     "newsId": 1039,
     "icon": "far fa-newspaper",
