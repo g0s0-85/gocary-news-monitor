@@ -1,4 +1,15 @@
 {
+  "1100": {
+    "newsId": 1100,
+    "icon": "far fa-newspaper",
+    "title": "Route 7 Delayed",
+    "friendlyUrl": "route-7-delayed",
+    "summary": null,
+    "routes": null,
+    "affectsAllRoutes": false,
+    "publishDateUtc": "2026-09-16T11:16:33.7780677+00:00",
+    "body": "The 6:45 AM to 7:45 AM Route 7 trip is currently not in service. At this time, this is the only trip experiencing a delay.\nWe appreciate your patience and apologize for any inconvenience. Thank you for your understanding."
+  },
   "1099": {
     "newsId": 1099,
     "icon": "far fa-newspaper",
