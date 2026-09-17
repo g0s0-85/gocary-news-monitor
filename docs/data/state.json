@@ -1,4 +1,17 @@
 {
+  "1103": {
+    "newsId": 1103,
+    "icon": "far fa-newspaper",
+    "title": "Route 2 Temporary Detour (9/17, 8PM to 10PM)",
+    "friendlyUrl": "route-2-temporary-detour-9-17-8pm-to-10pm",
+    "summary": null,
+    "routes": [
+      "2"
+    ],
+    "affectsAllRoutes": false,
+    "publishDateUtc": "2026-09-17T23:00:00+00:00",
+    "body": "Due to temporary roadway construction along Blue Ridge Road between Trinity Road and Hillsborough Street, Route 2 inbound trips (NC Vet School to Downtown Cary) will follow the detour below:\nThe following stops will be closed from 8pm to 10pm:\nTrinity Rd and Thornberry St, Stop ID: 8186\nTrinity Rd at Youth Center Dr, Stop ID: 8196"
+  },
   "836": {
     "newsId": 836,
     "icon": "fas fa-exclamation",
