@@ -1,4 +1,17 @@
 {
+  "1105": {
+    "newsId": 1105,
+    "icon": "far fa-newspaper",
+    "title": "GoApex Route 1 Detour for Apex Festa Italiana, Saturday, 9/19",
+    "friendlyUrl": "goapex-route-1-detour-for-apex-festa-italiana-saturday-9-19",
+    "summary": null,
+    "routes": [
+      "GA1"
+    ],
+    "affectsAllRoutes": false,
+    "publishDateUtc": "2026-09-18T21:00:00+00:00",
+    "body": "Route: GoApex Route 1\nEvent: Apex Festa Italiana\nDate: Saturday, September 19, 2026\nTime: 6:00 AM \u2013 10:00 PM\nGoApex Route 1 will detour (West Loop) due to Apex Festa Italiana. Hunter Street will be closed between S. Salem Street and Mason Street.\nDetour: Apex Senior Center \u2192 left on Mason St \u2192 straight on Laura Duncan Rd \u2192 left on Apex Peakway \u2192 left on S. Salem St \u2192 right on W. Williams St/NC 55 \u2192 continue on route.\nClosed Stop:\n16097 Hunter St. at Ambergate Station\nTemporary Stops:\n1165 Laura Duncan Rd. at Apex Peakway\n16005 Apex Peakway at Laura Duncan Rd.\n16007 Apex Peakway at Ambergate Station\n16009 N. Salem St. at Apex Peakway\n11371 N. Salem St. at Hunter St."
+  },
   "1099": {
     "newsId": 1099,
     "icon": "far fa-newspaper",
