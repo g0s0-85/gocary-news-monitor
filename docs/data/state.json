@@ -1,4 +1,15 @@
 {
+  "1106": {
+    "newsId": 1106,
+    "icon": "far fa-newspaper",
+    "title": "Route GA1 is delayed",
+    "friendlyUrl": "route-ga1-is-delayed",
+    "summary": null,
+    "routes": null,
+    "affectsAllRoutes": false,
+    "publishDateUtc": "2026-09-19T15:30:00+00:00",
+    "body": "Route GA1 is delayed 15-20 minutes, please expect delays along this route.\nRt GA1 11:30 AM Westbound is delayed 15-20 minutes.\nRt GA1 11:51 AM Eastbound is delayed 15-20 minutes, we appreciate your patience."
+  },
   "1105": {
     "newsId": 1105,
     "icon": "far fa-newspaper",
