@@ -1,15 +1,4 @@
 {
-  "1109": {
-    "newsId": 1109,
-    "icon": "far fa-newspaper",
-    "title": "Route 7 is delayed",
-    "friendlyUrl": "route-7-is-delayed",
-    "summary": null,
-    "routes": null,
-    "affectsAllRoutes": false,
-    "publishDateUtc": "2026-09-21T11:15:00+00:00",
-    "body": "Route 7 is delayed 15-20 minutes, please expect delays along this route.\nRt 7 7:15 AM outbound is delayed 15-20 minutes, we appreciate your patience."
-  },
   "836": {
     "newsId": 836,
     "icon": "fas fa-exclamation",
