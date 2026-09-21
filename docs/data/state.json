@@ -10,17 +10,6 @@
     "publishDateUtc": "2026-09-21T11:15:00+00:00",
     "body": "Route 7 is delayed 15-20 minutes, please expect delays along this route.\nRt 7 7:15 AM outbound is delayed 15-20 minutes, we appreciate your patience."
   },
-  "1099": {
-    "newsId": 1099,
-    "icon": "far fa-newspaper",
-    "title": "Route 4 Delayed ",
-    "friendlyUrl": "route-4-delayed",
-    "summary": null,
-    "routes": null,
-    "affectsAllRoutes": false,
-    "publishDateUtc": "2026-09-16T11:15:56.923+00:00",
-    "body": "The 6:30 AM to 7:30 AM Route 4 trip is currently not in service. At this time, this is the only trip experiencing a delay.\nWe appreciate your patience and apologize for any inconvenience. Thank you for your understanding."
-  },
   "836": {
     "newsId": 836,
     "icon": "fas fa-exclamation",
