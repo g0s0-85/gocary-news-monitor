@@ -1,15 +1,4 @@
 {
-  "1112": {
-    "newsId": 1112,
-    "icon": "far fa-newspaper",
-    "title": "Route 4 is delayed",
-    "friendlyUrl": "route-4-is-delayed",
-    "summary": null,
-    "routes": null,
-    "affectsAllRoutes": false,
-    "publishDateUtc": "2026-09-22T10:00:00+00:00",
-    "body": "Route 4 is delayed 10-15 minutes, expect delays along this route.\nRt 4 6:00 AM outbound is delayed 10-15 delayed we appreciate your patience."
-  },
   "836": {
     "newsId": 836,
     "icon": "fas fa-exclamation",
