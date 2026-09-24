@@ -5,9 +5,11 @@
     "title": "Route 4 Detour, Sept 25, 9 AM\u20132 PM",
     "friendlyUrl": "route-4-detour-sept-25-9-am2-pm",
     "summary": null,
-    "routes": null,
+    "routes": [
+      "4"
+    ],
     "affectsAllRoutes": false,
-    "publishDateUtc": "2026-09-24T22:34:54.9432305+00:00",
+    "publishDateUtc": "2026-09-24T22:34:54.943+00:00",
     "body": "Due to intersection construction at Maury O'Dell Place and High House Road, these stops are closed on 9/25, 9:00 a.m.\u20132:00 p.m.:\nBond Park at Cary Senior Center (Stop ID 11022)\nMaury O'Dell Place at Bond Park Community Center (Stop ID 11391)\nUse the temporary stop on High House Road at Maury O'Dell Place. See the graphic below for details.\nInfo: (919) 485-RIDE."
   },
   "836": {
