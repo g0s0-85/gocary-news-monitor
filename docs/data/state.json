@@ -1,15 +1,4 @@
 {
-  "1111": {
-    "newsId": 1111,
-    "icon": "far fa-newspaper",
-    "title": "Route 6/4 is delayed",
-    "friendlyUrl": "route-6-4-is-delayed",
-    "summary": null,
-    "routes": null,
-    "affectsAllRoutes": false,
-    "publishDateUtc": "2026-09-24T21:39:46.5230476+00:00",
-    "body": "The 17:30 inbound route 6, 4603, will be delayed. The 18:00 4 outbound route 4 will be delayed."
-  },
   "836": {
     "newsId": 836,
     "icon": "fas fa-exclamation",
