@@ -1,4 +1,15 @@
 {
+  "1117": {
+    "newsId": 1117,
+    "icon": "far fa-newspaper",
+    "title": "GA 1 is delayed",
+    "friendlyUrl": "ga-1-is-delayed",
+    "summary": null,
+    "routes": null,
+    "affectsAllRoutes": false,
+    "publishDateUtc": "2026-09-24T16:00:00+00:00",
+    "body": "GA 1 is delayed 15-20 minutes late, please expect delays along this route.\nGoApex is 12:00 PM Westbound is delayed 10-15 minutes.\nGoApex is 12:21 PM Eastbound is delayed10-15 minutes, we appreciate your patience."
+  },
   "836": {
     "newsId": 836,
     "icon": "fas fa-exclamation",
