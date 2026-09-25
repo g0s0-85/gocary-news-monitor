@@ -1,4 +1,15 @@
 {
+  "1119": {
+    "newsId": 1119,
+    "icon": "far fa-newspaper",
+    "title": "GoCary Route 9 Detour",
+    "friendlyUrl": "gocary-route-9-detour",
+    "summary": null,
+    "routes": null,
+    "affectsAllRoutes": false,
+    "publishDateUtc": "2026-09-25T20:04:34.0189147+00:00",
+    "body": "Due to the Apex HS Homecoming Parade, GoCary Route 9 will detour from 4pm to 7pm today.\nThe detour route is as follows:\nLaura Duncan Road > Hunter Street > Salem Street.\nThe following stops will be closed:\nLaura Duncan Rd at Apex Peakway (NB)\nStop ID: 1165\nApex Peakway at Laura Duncan Rd\nStop ID: 16005\nApex Peakway at Ambergate Station\nStop ID: 16007\nMore info forthcoming."
+  },
   "836": {
     "newsId": 836,
     "icon": "fas fa-exclamation",
