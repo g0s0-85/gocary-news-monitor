@@ -1,4 +1,17 @@
 {
+  "1123": {
+    "newsId": 1123,
+    "icon": "far fa-newspaper",
+    "title": "Route 6 detour, 10/2/26, 4:30 pm to 5:30 pm",
+    "friendlyUrl": "route-6-detour-10-2-26-430-pm-to-530-pm",
+    "summary": null,
+    "routes": [
+      "6"
+    ],
+    "affectsAllRoutes": false,
+    "publishDateUtc": "2026-10-02T17:42:28.5110953+00:00",
+    "body": "Route 6 will be detoured between 4:30 and 5:30pm today due to the Cary High School Homecoming parade. See the detour routing below.\nFor more information, please call (919) 485-RIDE or email BetterTransit@GoCary.org."
+  },
   "1122": {
     "newsId": 1122,
     "icon": "far fa-newspaper",
