@@ -1,4 +1,15 @@
 {
+  "1126": {
+    "newsId": 1126,
+    "icon": "far fa-newspaper",
+    "title": "Route 1 lost service",
+    "friendlyUrl": "route-1-lost-service",
+    "summary": null,
+    "routes": null,
+    "affectsAllRoutes": false,
+    "publishDateUtc": "2026-10-03T19:18:52.0838877+00:00",
+    "body": "GoCary route 1 for 14:45-15:45 , block 1702, inbound and outbound lost service."
+  },
   "1122": {
     "newsId": 1122,
     "icon": "far fa-newspaper",
