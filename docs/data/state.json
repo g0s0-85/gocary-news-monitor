@@ -10,17 +10,6 @@
     "publishDateUtc": "2026-10-03T18:15:00+00:00",
     "body": "Route 5 is delayed 10-15 minutes, please expect delays along this route."
   },
-  "1124": {
-    "newsId": 1124,
-    "icon": "far fa-newspaper",
-    "title": "Route 3 is delayed",
-    "friendlyUrl": "route-3-is-delayed",
-    "summary": null,
-    "routes": null,
-    "affectsAllRoutes": false,
-    "publishDateUtc": "2026-10-03T18:00:00+00:00",
-    "body": "Route 3 13:58 is delayed 10-20 minutes, expect delays along this route.\nRoute 3 13:58 is delayed 10-20 minutes, we appreciate your patience."
-  },
   "1122": {
     "newsId": 1122,
     "icon": "far fa-newspaper",
