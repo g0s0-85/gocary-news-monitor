@@ -1,15 +1,4 @@
 {
-  "1128": {
-    "newsId": 1128,
-    "icon": "far fa-newspaper",
-    "title": "Route 1 lost service",
-    "friendlyUrl": "route-1-lost-service",
-    "summary": null,
-    "routes": null,
-    "affectsAllRoutes": false,
-    "publishDateUtc": "2026-10-05T21:38:17.9903168+00:00",
-    "body": "The 4:15pm trip on the Route 1 will be missed.\nThe 4:45 trip on the Route 1 will be missed.\nRegular service will resume with the next schedule trip."
-  },
   "1122": {
     "newsId": 1122,
     "icon": "far fa-newspaper",
