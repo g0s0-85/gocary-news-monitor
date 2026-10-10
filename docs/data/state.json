@@ -1,15 +1,4 @@
 {
-  "1117": {
-    "newsId": 1117,
-    "icon": "far fa-newspaper",
-    "title": "GA 1 is delayed",
-    "friendlyUrl": "ga-1-is-delayed",
-    "summary": null,
-    "routes": null,
-    "affectsAllRoutes": false,
-    "publishDateUtc": "2026-10-08T21:15:00+00:00",
-    "body": "GA 1 is delayed 30 minutes plus due to an accident thats affecting the route.\nplease expect delays along this route.\nwe appreciate your patience."
-  },
   "836": {
     "newsId": 836,
     "icon": "fas fa-exclamation",
