@@ -10,17 +10,6 @@
     "publishDateUtc": "2026-10-10T18:29:11.2732432+00:00",
     "body": "The 17:45 outbound trip and the 18:13 inbound trip is delayed. Regular service will continue next loop."
   },
-  "1131": {
-    "newsId": 1131,
-    "icon": "far fa-newspaper",
-    "title": "Route 7 lost service",
-    "friendlyUrl": "route-7-lost-service",
-    "summary": null,
-    "routes": null,
-    "affectsAllRoutes": false,
-    "publishDateUtc": "2026-10-10T18:26:34.0915151+00:00",
-    "body": "The 16:45 outbound trip and the 17:10 inbound trip is delayed. \u00a0Regular service will continue next loop.\nThe 18:45 outbound trip and the 19:10 inbound trip is delayed. Regular service will continue next loop."
-  },
   "836": {
     "newsId": 836,
     "icon": "fas fa-exclamation",
