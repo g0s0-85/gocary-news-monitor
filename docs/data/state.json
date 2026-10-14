@@ -21,6 +21,17 @@
     "publishDateUtc": "2026-10-14T17:46:33.5350728+00:00",
     "body": "The 13:30 WB and the 13:51 EB loop is dalayed. Regular service will resume on the next scheduled loop."
   },
+  "1140": {
+    "newsId": 1140,
+    "icon": "far fa-newspaper",
+    "title": "Route 5 is delayed",
+    "friendlyUrl": "route-5-is-delayed",
+    "summary": null,
+    "routes": null,
+    "affectsAllRoutes": false,
+    "publishDateUtc": "2026-10-14T17:45:00+00:00",
+    "body": "The 13:45 outbound route 5 and the 13:58 inbound is delayed. Regular service will continue next loop."
+  },
   "1137": {
     "newsId": 1137,
     "icon": "fas fa-exclamation",
