@@ -1,15 +1,4 @@
 {
-  "1141": {
-    "newsId": 1141,
-    "icon": "far fa-newspaper",
-    "title": "GoCary App Temporarily Down",
-    "friendlyUrl": "gocary-app-temporarily-down",
-    "summary": null,
-    "routes": null,
-    "affectsAllRoutes": true,
-    "publishDateUtc": "2026-10-15T12:04:15.0872301+00:00",
-    "body": "At this time, all GoCary routes are running normally but may not be displaying information on the app. We are working to resolve this as soon as possible. Thank you for your patience."
-  },
   "1137": {
     "newsId": 1137,
     "icon": "fas fa-exclamation",
