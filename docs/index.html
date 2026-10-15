@@ -69,6 +69,16 @@
   .badge.modified { background: var(--modified); }
   .entry-title { font-weight: 600; font-size: 14px; }
   .entry-time { font-size: 12px; color: var(--muted); white-space: nowrap; }
+  .log-filter { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin-bottom: 12px; font-size: 13px; color: var(--muted); }
+  .log-filter label { display: flex; align-items: center; gap: 6px; }
+  .log-filter input[type="date"] {
+    font: inherit; color: var(--text); background: var(--card);
+    border: 1px solid var(--border); border-radius: 6px; padding: 4px 8px;
+  }
+  .log-filter button {
+    font: inherit; color: var(--accent); background: none;
+    border: 1px solid var(--border); border-radius: 6px; padding: 4px 10px; cursor: pointer;
+  }
   .entry-summary { margin-top: 6px; font-size: 13px; color: var(--text); white-space: pre-wrap; }
   .details { margin-top: 8px; font-size: 13px; color: var(--muted); }
   .details table { border-collapse: collapse; width: 100%; margin-top: 6px; }
@@ -107,6 +117,12 @@
   <div id="current"><div class="empty">Loading…</div></div>
 
   <h2>Change log</h2>
+  <div class="log-filter">
+    <label>From <input type="date" id="log-from"></label>
+    <label>To <input type="date" id="log-to"></label>
+    <button type="button" id="log-clear" hidden>Clear</button>
+    <span id="log-count"></span>
+  </div>
   <div id="log"><div class="empty">Loading…</div></div>
 </main>
 
@@ -168,10 +184,50 @@ function renderDetails(entry) {
   return `<div class="details"><table>${rows}</table></div>`;
 }
 
+// Kept at module level so the date filter can re-render without
+// re-fetching, and so the once-a-minute auto-refresh keeps the filter the
+// viewer chose (the inputs live outside #log, which is what gets rebuilt).
+let allLogEntries = [];
+
+function localDateKey(isoTimestamp) {
+  const d = new Date(isoTimestamp);
+  const mm = String(d.getMonth() + 1).padStart(2, '0');
+  const dd = String(d.getDate()).padStart(2, '0');
+  return `${d.getFullYear()}-${mm}-${dd}`;
+}
+
 function renderLog(entries) {
+  allLogEntries = entries;
+  applyLogFilter();
+}
+
+function applyLogFilter() {
   const el = document.getElementById('log');
-  if (!entries.length) {
+  const from = document.getElementById('log-from').value;
+  const to = document.getElementById('log-to').value;
+  const countEl = document.getElementById('log-count');
+  document.getElementById('log-clear').hidden = !(from || to);
+
+  if (!allLogEntries.length) {
+    countEl.textContent = '';
     el.innerHTML = '<div class="empty">No changes logged yet. The first check establishes a baseline; anything that changes after that will show up here.</div>';
+    return;
+  }
+
+  // Dates are compared in the viewer's local time, matching the times
+  // shown on each entry, and both ends are inclusive.
+  let entries = allLogEntries.filter(e => {
+    const day = localDateKey(e.timestamp);
+    return (!from || day >= from) && (!to || day <= to);
+  });
+  countEl.textContent = (from || to)
+    ? `Showing ${entries.length} of ${allLogEntries.length} entries`
+    : '';
+
+  if (!entries.length) {
+    el.innerHTML = from && to && from > to
+      ? '<div class="empty">The start date is after the end date.</div>'
+      : '<div class="empty">No log entries in that date range.</div>';
     return;
   }
   entries = entries.slice().reverse();
@@ -252,6 +308,14 @@ function renderStatus(status, latestRun) {
 
   el.innerHTML = parts.length ? parts.join(' · ') : 'not checked yet';
 }
+
+document.getElementById('log-from').addEventListener('change', applyLogFilter);
+document.getElementById('log-to').addEventListener('change', applyLogFilter);
+document.getElementById('log-clear').addEventListener('click', () => {
+  document.getElementById('log-from').value = '';
+  document.getElementById('log-to').value = '';
+  applyLogFilter();
+});
 
 async function refresh() {
   const [log, state, status, latestRun] = await Promise.all([
