@@ -1,15 +1,4 @@
 {
-  "1142": {
-    "newsId": 1142,
-    "icon": "far fa-newspaper",
-    "title": "Route 4 is delayed",
-    "friendlyUrl": "route-4-is-delayed",
-    "summary": null,
-    "routes": null,
-    "affectsAllRoutes": false,
-    "publishDateUtc": "2026-10-15T18:33:14.2389346+00:00",
-    "body": "The 14:00 outbound trip and the 14:30 inbound trip is delayed. Regular service will continue next loop."
-  },
   "1137": {
     "newsId": 1137,
     "icon": "fas fa-exclamation",
