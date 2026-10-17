@@ -10,17 +10,6 @@
     "publishDateUtc": "2026-10-17T18:55:30.0538469+00:00",
     "body": "The Go Apex,14:30, WB route is delayed.\nThe Go Apex, 14:51, EB route is delayed.\nRegular service will continue next loop."
   },
-  "1147": {
-    "newsId": 1147,
-    "icon": "far fa-newspaper",
-    "title": "The route 7 is delayed",
-    "friendlyUrl": "the-route-7-is-delayed",
-    "summary": null,
-    "routes": null,
-    "affectsAllRoutes": false,
-    "publishDateUtc": "2026-10-17T17:23:00.3813216+00:00",
-    "body": "The 13:15 outbound route 7 is delayed.\nThe 1:40 inbound route 7 is delayed.\nRegular service will continue on the next loop."
-  },
   "1145": {
     "newsId": 1145,
     "icon": "far fa-newspaper",
