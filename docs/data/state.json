@@ -1,15 +1,4 @@
 {
-  "1148": {
-    "newsId": 1148,
-    "icon": "far fa-newspaper",
-    "title": "Go Apex is delayed",
-    "friendlyUrl": "go-apex-is-delayed",
-    "summary": null,
-    "routes": null,
-    "affectsAllRoutes": false,
-    "publishDateUtc": "2026-10-17T18:55:30.0538469+00:00",
-    "body": "The Go Apex,14:30, WB route is delayed.\nThe Go Apex, 14:51, EB route is delayed.\nRegular service will continue next loop."
-  },
   "1145": {
     "newsId": 1145,
     "icon": "far fa-newspaper",
