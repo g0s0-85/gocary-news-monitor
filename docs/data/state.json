@@ -1,4 +1,15 @@
 {
+  "1150": {
+    "newsId": 1150,
+    "icon": "far fa-newspaper",
+    "title": "Western BRT - Public Open House at the Cary Park Academy Pavilion ",
+    "friendlyUrl": "western-brt-public-open-house-at-the-cary-park-academy-pavilion",
+    "summary": "A Quicker Connection between Raleigh and Cary is on the way!",
+    "routes": null,
+    "affectsAllRoutes": true,
+    "publishDateUtc": "2026-10-19T18:16:43.1992087+00:00",
+    "body": "Join us at an upcoming open house to learn about Bus Rapid Transit, see the latest plans and design updates, and share your feedback.\nTuesday, October 20\n5\u20137 p.m.\nDowntown Cary Park Academy Pavilion"
+  },
   "1143": {
     "newsId": 1143,
     "icon": "far fa-newspaper",
