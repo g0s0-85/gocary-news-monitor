@@ -1,4 +1,15 @@
 {
+  "1153": {
+    "newsId": 1153,
+    "icon": "far fa-newspaper",
+    "title": "Route 3 is delayed",
+    "friendlyUrl": "route-3-is-delayed",
+    "summary": null,
+    "routes": null,
+    "affectsAllRoutes": false,
+    "publishDateUtc": "2026-10-22T17:59:00.4717275+00:00",
+    "body": "The outbound Route 3 is delayed. Regular service will resume on the next loop."
+  },
   "1152": {
     "newsId": 1152,
     "icon": "far fa-newspaper",
