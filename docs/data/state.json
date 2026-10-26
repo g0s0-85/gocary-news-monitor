@@ -1,17 +1,4 @@
 {
-  "1154": {
-    "newsId": 1154,
-    "icon": "far fa-newspaper",
-    "title": "Potential Delays to GoApex Route 1:  Friday, 10/23 - Sunday, 10/25",
-    "friendlyUrl": "potential-delays-to-goapex-route-1-friday-10-23-sunday-10-25",
-    "summary": null,
-    "routes": [
-      "GA1"
-    ],
-    "affectsAllRoutes": false,
-    "publishDateUtc": "2026-10-23T15:11:39.2077245+00:00",
-    "body": "Potential delays to GoApex Route 1, Friday, 10/23 - Sunday, 10/25, due to roadway construction on S Salem Street near Apex Peakway and potential impacts from traffic detours."
-  },
   "1151": {
     "newsId": 1151,
     "icon": "far fa-newspaper",
