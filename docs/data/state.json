@@ -2,24 +2,13 @@
   "1155": {
     "newsId": 1155,
     "icon": "far fa-newspaper",
-    "title": "GA 1 is delayed",
-    "friendlyUrl": "ga-1-is-delayed",
+    "title": "Route 1 and Route 9: Possible Delays",
+    "friendlyUrl": "route-1-and-route-9-possible-delays",
     "summary": null,
     "routes": null,
     "affectsAllRoutes": false,
     "publishDateUtc": "2026-10-26T10:00:00+00:00",
-    "body": "GA 1 is delayed 10-15 minutes, please expect delays along this route.\nGA 1 is delayed 10-15 minutes, we appreciate your patience."
-  },
-  "1151": {
-    "newsId": 1151,
-    "icon": "far fa-newspaper",
-    "title": "Route 6 is delayed",
-    "friendlyUrl": "route-6-is-delayed",
-    "summary": null,
-    "routes": null,
-    "affectsAllRoutes": false,
-    "publishDateUtc": "2026-10-20T11:30:00+00:00",
-    "body": "Route 6 is delayed 15-20 minutes, please expect delays along this route.\nRT 6 Inbound @ 7:30 is delayed 15-20 minutes, we appreciate your patience."
+    "body": "Route 1 and Route 9: Possible Delays\nConstruction on S Salem Street near Chatham Street may delay GoApex Route 1 and GoCary Route 9. Please plan extra time for your trip. Thank you for your patience as work continues."
   },
   "1143": {
     "newsId": 1143,
