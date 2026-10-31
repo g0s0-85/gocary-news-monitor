@@ -1,4 +1,15 @@
 {
+  "1166": {
+    "newsId": 1166,
+    "icon": "far fa-newspaper",
+    "title": "Route 4 is delayed",
+    "friendlyUrl": "route-4-is-delayed",
+    "summary": null,
+    "routes": null,
+    "affectsAllRoutes": false,
+    "publishDateUtc": "2026-10-31T21:00:00+00:00",
+    "body": "Route 4 is delayed 30 minutes, please expect delays along this route.\nRt 4 17:00 PM 4 Outbound is delayed 30 minutes.\nRt 4 17:30 PM 4 Inbound is delayed 30 minutes.\nRt 4 19:00 PM 4 Outbound is delayed 30 minutes.\nRt 4 19:30 PM 4 Inbound is delayed 30 minutes, we appreciate your patience."
+  },
   "1164": {
     "newsId": 1164,
     "icon": "far fa-newspaper",
