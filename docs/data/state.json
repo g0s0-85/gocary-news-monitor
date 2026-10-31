@@ -8,7 +8,7 @@
     "routes": null,
     "affectsAllRoutes": false,
     "publishDateUtc": "2026-10-31T11:45:00+00:00",
-    "body": "Route 7 is delayed 30 minutes, please expect delays along this route.\nRt 7 7:45 AM 7 Outbound is delayed 30 minutes.\nRt 7 8:10 AM 7 Inbound is delayed 30 minutes.\nRt 7 9:45 AM 7 Outbound is delayed 30 minutes.\nRt 7 10:10 AM Inbound is delayed 30 minutes, we appreciate your patience."
+    "body": "Route 7 is delayed 30 minutes, please expect delays along this route.\nRt 7 7:45 AM 7 Outbound is delayed 30 minutes.\nRt 7 8:10 AM 7 Inbound is delayed 30 minutes.\nRt 7 9:45 AM 7 Outbound is delayed 30 minutes.\nRt 7 10:10 AM Inbound is delayed 30 minutes.\nRT 7 11:45 AM Outbound is delays 30 minutes.\nRt 7\u00a0 12:10 PM Inbound is delayed 30 Minutes, we appreciate your patience."
   },
   "1162": {
     "newsId": 1162,
