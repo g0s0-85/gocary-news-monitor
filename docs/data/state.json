@@ -1,17 +1,4 @@
 {
-  "1168": {
-    "newsId": 1168,
-    "icon": "far fa-newspaper",
-    "title": "Rt 9 delayed",
-    "friendlyUrl": "rt-9-delayed",
-    "summary": null,
-    "routes": [
-      "9"
-    ],
-    "affectsAllRoutes": false,
-    "publishDateUtc": "2026-11-03T17:29:23.754+00:00",
-    "body": "The 12:00 outbound Rt 9 is delayed. Regular service will continue on the next loop.\nThe 12:30 inbound Rt 9 is delayed. Regular service will continue on the next loop."
-  },
   "1156": {
     "newsId": 1156,
     "icon": "far fa-newspaper",
