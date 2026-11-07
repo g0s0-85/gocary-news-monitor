@@ -1,4 +1,15 @@
 {
+  "1174": {
+    "newsId": 1174,
+    "icon": "far fa-newspaper",
+    "title": "Route 3 is delayed",
+    "friendlyUrl": "route-3-is-delayed",
+    "summary": null,
+    "routes": null,
+    "affectsAllRoutes": false,
+    "publishDateUtc": "2026-11-07T18:45:00+00:00",
+    "body": "The 13:45 outbound loop and the 13:58 inbound loop is delayed. We appreciate your patience. Regular service will continue next loop."
+  },
   "1170": {
     "newsId": 1170,
     "icon": "far fa-newspaper",
@@ -12,17 +23,6 @@
     "affectsAllRoutes": false,
     "publishDateUtc": "2026-11-07T05:00:00+00:00",
     "body": "Routes Affected:\n5 \u2013 Kildaire Farm\ny\n6 \u2013 Buck Jones\nEvent:\nTaste of China\nDate:\nSaturday, November 7, 2026\nTime:\n6:00 a.m.\u20137:00 p.m.\nDetour Information\nDue to the Taste of China Festival, Routes 5 \u2013 Kildaire Farm and 6 \u2013 Buck Jones will operate on a detour.\nSouth Academy Street will be closed between Dry Avenue and East Chatham Street. The following bus stops will be temporarily closed for the duration of the event:\nStop 11092: South Academy Street at Charlie Gaddy Lane (Routes 5 and 6)\nStop 11228: South Academy Street at Downtown Cary Park (Routes 5 and 6)\nStop 1365: South Academy Street at Waldo Street (Routes 5 and 6)\nPlease refer to the map below for the locations of the temporary bus stops:\nRoute 5 paired stops at Dry Avenue at Academy Street\nRoute 6 paired stops at Walker Street at Park Street.\nFor questions about this detour, please email BetterTransit@GoCary.org."
-  },
-  "1173": {
-    "newsId": 1173,
-    "icon": "far fa-newspaper",
-    "title": "Route 7 is delayed",
-    "friendlyUrl": "route-7-is-delayed",
-    "summary": null,
-    "routes": null,
-    "affectsAllRoutes": false,
-    "publishDateUtc": "2026-11-06T15:45:00+00:00",
-    "body": "Route 7 is delayed 10-15 minutes, expect delays along this route.\nRT 7 10:45 AM 7-outbound is delayed 10-15 minutes, we appreciate your patience."
   },
   "1171": {
     "newsId": 1171,
