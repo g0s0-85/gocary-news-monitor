@@ -10,17 +10,6 @@
     "publishDateUtc": "2026-11-07T19:28:23.8244203+00:00",
     "body": "The 13:15, outbound, Route 5 is delayed. Regular service will resume on the next loop.\nThe 13:28, inbound, Route 5 is delayed. Regular service will resume on the next loop."
   },
-  "1174": {
-    "newsId": 1174,
-    "icon": "far fa-newspaper",
-    "title": "Route 3 is delayed",
-    "friendlyUrl": "route-3-is-delayed",
-    "summary": null,
-    "routes": null,
-    "affectsAllRoutes": false,
-    "publishDateUtc": "2026-11-07T18:45:00+00:00",
-    "body": "The 13:45 outbound loop and the 13:58 inbound loop is delayed. We appreciate your patience. Regular service will continue next loop."
-  },
   "1170": {
     "newsId": 1170,
     "icon": "far fa-newspaper",
