@@ -10,6 +10,17 @@
     "publishDateUtc": "2026-11-12T13:45:00+00:00",
     "body": "Route 7 is delayed 10-15 minutes, please expect delays along this route.\nRt 7 8:45 7 outbound is delayed 5-10 minutes, we appreciate your patience."
   },
+  "1182": {
+    "newsId": 1182,
+    "icon": "far fa-newspaper",
+    "title": "Route 1 is delayed",
+    "friendlyUrl": "route-1-is-delayed",
+    "summary": null,
+    "routes": null,
+    "affectsAllRoutes": false,
+    "publishDateUtc": "2026-11-12T13:05:00+00:00",
+    "body": "Route 1 is delayed 10-15 minutes, please expect delays along this route.\nRoute 1 @ 8:05 1-Outbound is delayed 10-15 minutes.\nRoute 1 9:45 AM 1 outbound is delayed 15-20 minutes.\nRoute 1 10:13 AM 1 Inbound is delayed, 15-20 Minutes,\u00a0We appreciate your patience."
+  },
   "1180": {
     "newsId": 1180,
     "icon": "far fa-newspaper",
