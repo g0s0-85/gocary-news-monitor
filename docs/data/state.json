@@ -1,4 +1,15 @@
 {
+  "1180": {
+    "newsId": 1180,
+    "icon": "far fa-newspaper",
+    "title": "The Route 5/32B",
+    "friendlyUrl": "the-route-5-32b",
+    "summary": "The Route 3 running 20 minutes late",
+    "routes": null,
+    "affectsAllRoutes": false,
+    "publishDateUtc": "2026-11-12T01:56:54.0992284+00:00",
+    "body": "The Route 3 will running 20 minutes late- The Route 3-Running Late\nThe Route 5 will possibly be running 20 mintes late."
+  },
   "1171": {
     "newsId": 1171,
     "icon": "far fa-newspaper",
