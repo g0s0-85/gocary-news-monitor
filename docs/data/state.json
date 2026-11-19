@@ -1,4 +1,17 @@
 {
+  "1191": {
+    "newsId": 1191,
+    "icon": "far fa-newspaper",
+    "title": "GoApex 1: Possible delays in Downtown Apex, Nov 19-20",
+    "friendlyUrl": "goapex-1-possible-delays-in-downtown-apex-nov-19-20",
+    "summary": null,
+    "routes": [
+      "GA1"
+    ],
+    "affectsAllRoutes": false,
+    "publishDateUtc": "2026-11-19T05:00:00+00:00",
+    "body": "GoApex 1: Possible delays in Downtown Apex, Nov 19-20\nStreet paving on S Salem St in Apex may cause delays for GoApex 1 on Thursday, Nov 19 and Friday, Nov 20. On Thursday, crews will pave at Salem/Chatham, and only southbound Salem St traffic will be allowed through the work area, with flaggers directing vehicles. On Friday, paving moves to Saunders St, which will be fully closed between Commerce St and N Salem St, and southbound Salem St will stay open. GoApex 1 will stay on its regular route. Work is weather dependent. Please allow extra travel time."
+  },
   "1171": {
     "newsId": 1171,
     "icon": "far fa-newspaper",
