@@ -1,15 +1,4 @@
 {
-  "1196": {
-    "newsId": 1196,
-    "icon": "far fa-newspaper",
-    "title": "Route 2 is delayed",
-    "friendlyUrl": "route-2-is-delayed",
-    "summary": null,
-    "routes": null,
-    "affectsAllRoutes": false,
-    "publishDateUtc": "2026-11-20T11:30:00+00:00",
-    "body": "Route 2 is delayed 10-15 minutes, please expect delays along this route.\nRT 2 6:30 AM 2 outbound is delayed 10-15 minutes.\nRT 6:54 2 Inbound is delayed 10-15 minutes, we appreciate your patience."
-  },
   "1191": {
     "newsId": 1191,
     "icon": "far fa-newspaper",
