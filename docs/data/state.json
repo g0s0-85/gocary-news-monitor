@@ -10,17 +10,6 @@
     "publishDateUtc": "2026-11-20T16:54:03.0658849+00:00",
     "body": "The 11:45 outbound and the 11:58 inbound is delayed. Regular service will continue next loop. We appreciate your patience."
   },
-  "1198": {
-    "newsId": 1198,
-    "icon": "far fa-newspaper",
-    "title": "Route 5 Lost Service",
-    "friendlyUrl": "route-5-lost-service",
-    "summary": null,
-    "routes": null,
-    "affectsAllRoutes": false,
-    "publishDateUtc": "2026-11-20T16:16:00+00:00",
-    "body": "The 11:15 outbound and 11:28 inbound is delayed. Regular service will continue next loop. We appreciate your patience."
-  },
   "1191": {
     "newsId": 1191,
     "icon": "far fa-newspaper",
