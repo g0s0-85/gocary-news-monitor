@@ -1,4 +1,15 @@
 {
+  "1205": {
+    "newsId": 1205,
+    "icon": "far fa-newspaper",
+    "title": "Route 6 Lost Service",
+    "friendlyUrl": "route-6-lost-service",
+    "summary": null,
+    "routes": null,
+    "affectsAllRoutes": false,
+    "publishDateUtc": "2026-11-21T17:10:23.2924072+00:00",
+    "body": "The 13:30 outbound and the 14:00 inbound is delayed.\nThe 15:30 outbound and the 16:00 inbound is delayed.\nThe 16:00 outbound and the 16:30 inbound is delayed.\nThe 17:30 outbound and the 18:00 inbound is delayed.\nThe 18:00 outbound and the 18:30 inbound is delayed.\nRegular service will continue next loop, we appreciate your patience."
+  },
   "1204": {
     "newsId": 1204,
     "icon": "far fa-newspaper",
