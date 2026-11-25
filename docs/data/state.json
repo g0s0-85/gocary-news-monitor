@@ -8,7 +8,7 @@
     "routes": null,
     "affectsAllRoutes": false,
     "publishDateUtc": "2026-11-25T12:00:00+00:00",
-    "body": "Route 6 is delayed 20-30 minutes, please expect delays along this route.\nRt 6 7:00 AM 6 Outbound is delayed 20-30 minutes."
+    "body": "Route 6 is delayed 20-30 minutes, please expect delays along this route.\nRt 6 7:00 AM 6 Outbound is delayed 20-30 minutes.\nRt 6 7:30 AM 6 Inbound is delayed 20-30 minutes.\nRt 6 9:00 AM 6 Outbound is delayed 20-30 minutes.\nRt 6 9:30 AM 6 Inbound is delayed 20-30 minutes, we appreciate your patience."
   },
   "1214": {
     "newsId": 1214,
