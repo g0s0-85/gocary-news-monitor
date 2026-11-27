@@ -1,15 +1,4 @@
 {
-  "1211": {
-    "newsId": 1211,
-    "icon": "far fa-newspaper",
-    "title": "\ud83e\udd83 Thanksgiving Service Reminder",
-    "friendlyUrl": "thanksgiving-service-reminder",
-    "summary": null,
-    "routes": null,
-    "affectsAllRoutes": true,
-    "publishDateUtc": "2026-11-24T19:35:19.7307529+00:00",
-    "body": "GoCary\u2019s fixed-route and Door to Door services will not operate on\nThursday, November 26\n. Regular service resumes\nFriday, November 27\n.\nWishing our riders, drivers, and community a happy Thanksgiving!"
-  },
   "1155": {
     "newsId": 1155,
     "icon": "far fa-newspaper",
